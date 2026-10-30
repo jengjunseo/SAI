@@ -1,0 +1,1 @@
+ALTER TABLE `shadow_debates` ADD `grant_manifest` text DEFAULT '[]' NOT NULL;

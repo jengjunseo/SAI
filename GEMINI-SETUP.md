@@ -18,6 +18,8 @@ Sites의 서버 환경변수에 `GEMINI_API_KEY`를 비밀 값으로 등록하�
 
 뉴스는 AI 검색 대신 RSS로 수집합니다. 오늘 보도된 기사를 우선하고 5분 캐시, 수동 갱신 60초 간격, 한국 시간 자정 날짜 전환을 사용합니다. 5개를 채우기 어려울 때만 최근 48시간 기사로 보충합니다. 북마크·하트·댓글·읽음은 AI를 부르지 않습니다.
 
+뉴스 후보는 제목의 정책·제도와 선택 또는 쟁점 신호를 기준으로 선별하고, 단순 인사·행사·홍보성 보도를 제외합니다. 이는 키워드 기반의 예비 선별이므로 누락이나 오판이 있을 수 있습니다. 적합한 후보가 부족하면 다섯 개 미만을 보여줍니다. 토론 생성 시에는 확보한 원문을 바탕으로 모델이 비교 가능한 두 접근과 근거가 충분한지 한 번 더 판단하며, 부적합하다고 판단하면 토론을 저장하지 않습니다. 이 판단과 출처 연결은 독립적인 사실 검증이 아닙니다.
+
 로컬에서는 `.env.example`을 `.dev.vars`로 복사해 값을 입력합니다. `.dev.vars`는 Git에서 제외됩니다. 검증 명령: `node --test tests/service.test.mjs tests/gemini.test.mjs tests/stream.test.mjs tests/playback.test.mjs`, `node node_modules/typescript/bin/tsc --noEmit`, `npm run build`.
 
 참고: [모델](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite), [Interactions API](https://ai.google.dev/api/interactions-api).

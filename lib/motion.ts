@@ -22,6 +22,8 @@ export function move(update:()=>void,direction:'forward'|'back'='forward'){
  current?.skipTransition();
  const transition=document.startViewTransition(()=>{flushSync(update);});
  current=transition;
+ // Skipping an interrupted transition rejects ready even when finished is handled.
+ void transition.ready.catch(()=>{});
  void transition.finished.catch(()=>{}).finally(()=>{if(current===transition)current=null;});
  return transition.updateCallbackDone.catch(()=>{});
 }

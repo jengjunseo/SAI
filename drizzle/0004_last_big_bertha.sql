@@ -1,0 +1,1 @@
+ALTER TABLE `evidence_grants` ADD `allow_display` integer DEFAULT 0 NOT NULL;
