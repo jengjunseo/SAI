@@ -1,0 +1,141 @@
+/* Quiet surfaces, clear type, and a consistent motion rhythm. */
+:root{--body-size:18px;--muted:#526175;--blue:#245dd8;--ease:cubic-bezier(.2,.75,.25,1);--quick:180ms;--flow:300ms}
+.app-shell.large-type{--body-size:21px}
+.app-shell{font-synthesis:none;-webkit-font-smoothing:antialiased}
+.home-intro>p,.page-heading>p,.row-copy>p,.date-row,.feed-status,.toolbar-hint,.finite-footer p,.comments-intro p,.sheet-description,.connection-guide,.preference-row p,.principle p,.install-steps p{color:#526175}
+.home-intro>p,.page-heading>p,.finite-footer p{font-size:15px;line-height:1.8}
+.date-row,.row-copy>p,.feed-status,.toolbar-hint,.category-badge,.brief-label,.article-meta,.article-caption,.source-disclosure small{font-size:13px;line-height:1.6}
+.live-label,.read-badge,.demo-pill,.status-pill{font-size:12px}
+.feed-toolbar h2{font-size:19px}
+.refresh-button{font-size:13px;min-height:44px}
+.category-scroll button{font-size:14px;min-height:44px;font-weight:600;color:#526175}
+.category-scroll button.selected{color:#fff;background:#263c58}
+.row-copy h3{font-size:19px;line-height:1.55;font-weight:700;color:#192638}
+.feature-card h3{font-size:25px;line-height:1.5;font-weight:750;color:#182b46}
+.feature-footer,.feature-link{font-size:13px;color:#304d76}
+.bottom-nav button{color:#526175;min-height:48px;transition:color var(--quick),background var(--quick)}
+.bottom-nav button span{font-size:12px;font-weight:650}
+.bottom-nav button.active{color:#245dd8}
+.article-heading h1{font-size:28px;line-height:1.5;letter-spacing:-.9px;font-weight:750;color:#172337}
+.article-caption,.article-meta>span{color:#526175}
+.article-meta>span,.article-meta .category-text{font-size:13px}
+.article-meta>span:last-child{font-size:13px}
+.article-caption .demo-pill{font-size:12px!important}
+.wordmark small{font-size:12px;color:#526175}
+.home-intro h1>span{color:#526175}
+.daily-brief strong{font-size:15px;line-height:1.65}
+.daily-progress small{font-size:13px}
+.feature-footer>span:first-child,.feature-link{font-size:13px;color:#304d76}
+.category-text,.read-badge{font-size:13px}
+.finite-footer>button,.guide-card p,.empty-state p,.empty-state button,.text-button,.comment-empty p{font-size:14px;line-height:1.8;color:#526175}
+.eyebrow,.my-stats span,.mindful-note>span,.principle>span{font-size:12px;color:#526175}
+.status-pill,.install-steps li>span,.comment-avatar{font-size:13px}
+.connection-box strong,.connection-guide code,.comment-form button{font-size:14px}
+.saving-note p,.offline-banner{font-size:14px;line-height:1.8}
+.article-caption a{color:#2456b7;font-weight:600;min-height:44px;display:flex;align-items:center}
+.detail-tabs{gap:0;justify-content:space-between}
+.detail-tabs button{font-size:15px;font-weight:600;min-height:56px;color:#526175;flex:1;padding:16px 3px}
+.detail-tabs button[aria-selected=true]{color:#173a70;font-weight:750}
+.detail-tabs button:after{content:'';position:absolute;bottom:-1px;left:14%;right:14%;height:3px;border-radius:3px;background:#245dd8;transform:scaleX(0);transition:transform var(--flow) var(--ease)}
+.detail-tabs button[aria-selected=true]:after{left:14%;right:14%;height:3px;background:#245dd8;transform:scaleX(1)}
+.detail-content{padding-top:24px}
+.context-card{background:#f3f6fa;border-color:#e3e9f1;padding:20px}
+.context-card>span{font-size:14px;font-weight:700;color:#334d6c;gap:8px}
+.context-card>p,.large-type .context-card>p{font-size:var(--body-size);font-weight:500;line-height:1.8;color:#253449;margin-top:12px;letter-spacing:-.25px}
+.ai-note{font-size:13px;line-height:1.7;color:#526175;align-items:flex-start;gap:7px;margin:18px 0 28px}
+.ai-note svg{flex-shrink:0;margin-top:4px}
+.debate-message{max-width:94%;margin-bottom:28px}
+.debate-message{scroll-margin-top:155px}
+.context-card>p,.debate-bubble>p,.summary-box>p{transition:font-size 200ms var(--ease)}
+.debate-speaker{font-size:14px;font-weight:750;color:#234c88;gap:7px;margin-bottom:10px;flex-wrap:wrap;row-gap:5px}
+.right .debate-speaker{color:#62438c}
+.debate-speaker small{font-size:12px;color:#526175;font-weight:500}
+.debate-speaker>span{width:26px;height:26px;background:#e8effc;color:#2456a3}
+.right .debate-speaker>span{background:#ede6f6;color:#62438c}
+.debate-bubble{padding:20px;background:#edf3ff;border:1px solid #e1e9f8}
+.right .debate-bubble{background:#f3eff9;border-color:#e8e0f2}
+.debate-bubble>p,.right .debate-bubble>p{font-size:var(--body-size);font-weight:550;line-height:1.85;letter-spacing:-.3px;color:#1d304c;word-break:keep-all;overflow-wrap:anywhere}
+.right .debate-bubble>p{color:#352747}
+.debate-bubble>button,.right .debate-bubble>button{font-size:13px;font-weight:600;color:#365888;min-height:44px;width:100%;padding:8px 0 0;margin-top:10px;transition:color var(--quick)}
+.right .debate-bubble>button{color:#654b80}
+.debate-bubble>button svg{transition:transform var(--flow) var(--ease)}
+.debate-bubble>button[aria-expanded=true] svg{transform:rotate(45deg)}
+.basis-panel{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows var(--flow) var(--ease),opacity var(--flow) var(--ease)}
+.basis-panel.open{grid-template-rows:1fr;opacity:1}
+.basis-panel>div{overflow:hidden;min-height:0}
+.basis-panel p{margin:12px 0 0;padding-top:14px;border-top:1px solid #ccd8ec;font-size:16px;line-height:1.8;font-weight:500;color:#334962;word-break:keep-all;overflow-wrap:anywhere}
+.right .basis-panel p{color:#514060;border-color:#dcd0e8}
+.summary-box{padding:24px 20px;background:#f1f7ee;border-color:#dce8d5}
+.summary-box .eyebrow{color:#456137;font-size:12px;letter-spacing:1.2px}
+.summary-box h3{font-size:23px;font-weight:750;line-height:1.5;color:#253b20}
+.summary-box>p,.large-type .summary-box>p{font-size:var(--body-size);font-weight:550;line-height:1.85;color:#293c23;overflow-wrap:anywhere}
+.uncertainty{gap:10px}
+.uncertainty>svg{flex-shrink:0;color:#415a36}
+.uncertainty strong{font-size:14px;font-weight:750;color:#314729}
+.uncertainty p{font-size:16px;font-weight:500;line-height:1.8;color:#3b5132}
+.next-turn{font-size:16px;min-height:58px;color:#234776;font-weight:700;transition:background var(--quick),transform var(--quick)}
+.next-turn span{font-size:13px;color:#526175}
+.personal-note label{font-size:16px;font-weight:700}
+.personal-note label small{font-size:12px;color:#526175}
+.personal-note textarea,.comment-form textarea{font-size:16px;line-height:1.8;color:#253449;min-height:130px}
+.personal-note textarea::placeholder,.comment-form textarea::placeholder,.search-field input::placeholder{color:#617086;opacity:1}
+.source-title{font-size:21px;line-height:1.7;font-weight:700;color:#253449}
+.source-excerpt>span{font-size:13px;color:#526175}
+.source-excerpt>p,.large-type .source-excerpt>p,.source-disclosure p,.comment-item p,.large-type .comment-item p{font-size:var(--body-size);font-weight:500;line-height:1.85;color:#29384e}
+.source-disclosure strong,.comments-intro p,.comment-by strong{font-size:15px;color:#34475e}
+.comment-by span,.comment-form>div>span{font-size:13px;color:#526175}
+.comment-item{animation:reading-arrive var(--flow) var(--ease) both}
+.article-actions button{color:#526175;min-width:65px;min-height:44px}
+.article-actions span{font-size:13px;font-weight:600}
+.article-actions .hearted{color:#be3453}
+.article-actions .bookmarked,.row-bookmark.active,.bookmark-button.active{color:#245dd8}
+.article-actions .hearted svg,.article-actions .bookmarked svg,.row-bookmark.active svg,.bookmark-button.active svg{animation:reaction-settle 380ms var(--ease)}
+.solid-button,.soft-button{font-size:15px;min-height:50px;font-weight:650}
+.bottom-sheet>.eyebrow{font-size:11px;color:#526175}
+.bottom-sheet>.soft-button{font-size:14px}
+.sheet-description,.preference-row p,.principle p,.install-steps p,.saving-note p{font-size:15px;line-height:1.8}
+.preference-row strong,.sheet-link{font-size:16px;color:#253449}
+.sheet-link{min-height:52px}
+.connection-box span,.connection-guide{font-size:14px;line-height:1.8}
+.toggle{box-sizing:content-box;border:9px solid white;flex-shrink:0}
+.toggle.on{background:#245dd8}
+.toast{font-size:14px;font-weight:500;transition:opacity var(--quick),transform var(--flow) var(--ease)}
+.inline-warning{font-size:14px!important;line-height:1.8;color:#9b401d}
+.rewrite-card{margin-top:24px;padding:20px;border:1px solid #dfe7f3;border-radius:18px;background:#f5f8fe}
+.rewrite-card>strong{font-size:16px;color:#253449}
+.rewrite-card p{font-size:14px;line-height:1.8;color:#526175;margin:8px 0 16px}
+.rewrite-card .solid-button{width:100%}
+.legacy-edit{padding:14px 16px;margin-bottom:24px;background:#f4f7fc;border:1px solid #e0e7f2;border-radius:14px;color:#526175;font-size:13px;line-height:1.7}
+.legacy-edit button{display:flex;align-items:center;gap:7px;min-height:44px;font-size:14px;font-weight:700;color:#2456b7}
+.debate-pending>p{font-size:17px;line-height:1.8;color:#526175}
+.debate-pending>small{font-size:13px;line-height:1.8;color:#526175}
+.bottom-sheet[open]{animation:sheet-rise 360ms var(--ease)}
+.bottom-sheet::backdrop{transition:background 220ms,backdrop-filter 220ms}
+.bottom-sheet[data-closing=true]::backdrop{background:transparent;backdrop-filter:blur(0)}
+.sheet-content{animation:reading-arrive 240ms var(--ease) both}
+button,a,input,textarea{-webkit-tap-highlight-color:transparent}
+button,a{touch-action:manipulation}
+button{transition:transform var(--quick) var(--ease),background-color var(--quick),color var(--quick),box-shadow var(--quick),opacity var(--quick)}
+button:active:not(:disabled){transform:scale(.97)}
+button:disabled{cursor:default}
+input,textarea{transition:border-color var(--quick),box-shadow var(--quick)}
+input:focus-visible,textarea:focus-visible{outline:2px solid #386fd5;outline-offset:3px}
+button:focus-visible,a:focus-visible{outline:3px solid #386fd5;outline-offset:4px;border-radius:8px}
+.enter{animation:reading-arrive 380ms var(--ease) both}
+.daily-progress .done{animation:reaction-settle 380ms var(--ease)}
+.bottom-nav .active svg{animation:nav-settle 300ms var(--ease)}
+.bottom-nav button i{animation:reaction-settle 300ms var(--ease)}
+.main-view,.detail-view{view-transition-name:app-content}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-group(app-content){animation-duration:280ms;animation-timing-function:var(--ease)}
+::view-transition-old(app-content){animation:reading-leave 180ms var(--ease) both}
+::view-transition-new(app-content){animation:reading-arrive 280ms var(--ease) both}
+::view-transition{pointer-events:none}
+@keyframes reading-arrive{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes reading-leave{to{opacity:0;transform:translateY(-5px)}}
+@keyframes reaction-settle{0%{transform:scale(.82)}55%{transform:scale(1.14)}100%{transform:scale(1)}}
+@keyframes nav-settle{0%{transform:translateY(3px)}60%{transform:translateY(-2px)}100%{transform:translateY(0)}}
+@keyframes sheet-rise{from{opacity:.35;transform:translateY(60px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:359px){.article-heading h1{font-size:26px}.debate-bubble{padding:17px}.detail-tabs button{font-size:14px}.debate-message{max-width:97%}.toolbar-hint{max-width:130px}.feature-footer{gap:8px;flex-wrap:wrap}}
+
+.reduce-motion *,.reduce-motion *::before,.reduce-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
